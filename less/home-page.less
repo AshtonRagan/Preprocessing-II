@@ -4,7 +4,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    @media @fone {
+      flex-direction: column;
+      width: 100%;
+    }
     .cta {
       margin: 3%;
       border-bottom: 2px dashed @navigation-border;
@@ -15,11 +18,21 @@
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @fone {
+        width: 90%;
+        text-align: center;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @fone {
+        text-align: center;
+        width: 90%;
+        order: 2;
+        margin: 2%;
+      }
 
       img {
         border-radius: 10px;
@@ -56,6 +69,11 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @fone {
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+    }
 
     .btn {
       .btn(#0c5c4d, white);
